@@ -24,7 +24,7 @@ function BusHeader({
               {from}
             </h1>
 
-            <FaArrowRight className="text-blue-600" />
+            <FaArrowRight className="text-ember" />
 
             <h1 className="text-3xl font-bold">
               {to}
@@ -58,7 +58,7 @@ function BusHeader({
 
         <button
           onClick={() => navigate("/")}
-          className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-xl"
+          className="ember-glow bg-gradient-to-r from-ember to-ember-light text-white px-6 py-3 rounded-xl"
         >
           Modify Search
         </button>

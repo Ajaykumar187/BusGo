@@ -140,7 +140,7 @@ function BusSearchResult() {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="min-h-screen py-10">
 
       <div className="max-w-7xl mx-auto px-5">
 

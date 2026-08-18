@@ -9,7 +9,7 @@ function BusFilter({ activeFilter, setActiveFilter }) {
           onClick={() => setActiveFilter(tab)}
           className={`px-5 py-2 rounded-full font-medium transition-colors ${
             activeFilter === tab
-              ? "bg-blue-700 text-white"
+              ? "bg-gradient-to-r from-ember to-ember-light text-white"
               : "bg-white text-gray-700 hover:bg-gray-100 shadow"
           }`}
         >

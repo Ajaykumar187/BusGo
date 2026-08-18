@@ -8,51 +8,53 @@ function BookingSummary({
   const total = subtotal + gst;
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-5">
+    <div className="glass-light rounded-2xl p-6 sticky top-24">
 
-      <h2 className="text-2xl font-bold mb-6">
+      <h2 className="font-display text-2xl font-bold mb-6 text-ink">
         Booking Summary
       </h2>
 
-      <div className="space-y-3">
+      <div className="space-y-3 text-ink/70">
 
         <p>
-          <strong>Selected Seats:</strong>{" "}
-          {selectedSeats.length
-            ? selectedSeats.join(", ")
-            : "None"}
+          <strong className="text-ink">Selected Seats:</strong>{" "}
+          <span className="font-mono">
+            {selectedSeats.length
+              ? selectedSeats.join(", ")
+              : "None"}
+          </span>
         </p>
 
         <p>
-          <strong>Passengers:</strong>{" "}
+          <strong className="text-ink">Passengers:</strong>{" "}
           {selectedSeats.length}
         </p>
 
         <p>
-          <strong>Fare / Seat:</strong> ₹{fare}
+          <strong className="text-ink">Fare / Seat:</strong> ₹{fare}
         </p>
 
-        <hr />
+        <hr className="border-ink/10" />
 
         <p>
-          <strong>Subtotal:</strong> ₹{subtotal}
+          <strong className="text-ink">Subtotal:</strong> ₹{subtotal}
         </p>
 
         <p>
-          <strong>GST (5%):</strong> ₹{gst.toFixed(2)}
+          <strong className="text-ink">GST (5%):</strong> ₹{gst.toFixed(2)}
         </p>
 
-        <h3 className="text-3xl font-bold text-blue-700">
+        <h3 className="font-display text-3xl font-bold text-ember">
           ₹{total.toFixed(2)}
         </h3>
 
         <button
           disabled={selectedSeats.length === 0}
           onClick={onContinue}
-          className={`w-full py-3 rounded-xl text-white font-semibold ${
+          className={`w-full py-3 rounded-xl text-white font-semibold transition-colors ${
             selectedSeats.length === 0
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-blue-700 hover:bg-blue-800"
+              ? "bg-ink/20 cursor-not-allowed"
+              : "ember-glow bg-gradient-to-r from-ember to-ember-light"
           }`}
         >
           Continue

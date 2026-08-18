@@ -14,14 +14,14 @@ function PriceFilter({
         onChange={(e) =>
           setMaxPrice(Number(e.target.value))
         }
-        className="w-full"
+        className="w-full accent-ember"
       />
 
-      <div className="flex justify-between mt-2">
+      <div className="flex justify-between mt-2 text-ink/60">
 
         <span>₹200</span>
 
-        <span className="font-semibold">
+        <span className="font-semibold text-ember">
 
           ₹{maxPrice}
 

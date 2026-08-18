@@ -17,19 +17,19 @@ function Profile() {
   if (!user) return null;
 
   return (
-    <div className="bg-gray-100 min-h-screen py-16 px-4">
+    <div className="min-h-screen py-16 px-4">
 
       <div className="max-w-xl mx-auto bg-white rounded-3xl shadow-xl p-10">
 
         <div className="flex flex-col items-center text-center border-b pb-8">
 
-          <FaUserCircle className="text-blue-600" size={90} />
+          <FaUserCircle className="text-ember" size={90} />
 
           <h1 className="text-3xl font-bold mt-4">
             {user.name}
           </h1>
 
-          <span className="mt-2 inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold capitalize">
+          <span className="mt-2 inline-block bg-ember/15 text-ember px-3 py-1 rounded-full text-xs font-semibold capitalize">
             {user.role}
           </span>
 
@@ -38,12 +38,12 @@ function Profile() {
         <div className="space-y-4 mt-8">
 
           <div className="flex items-center gap-3 text-gray-700">
-            <FaEnvelope className="text-blue-600" />
+            <FaEnvelope className="text-ember" />
             <span>{user.email}</span>
           </div>
 
           <div className="flex items-center gap-3 text-gray-700">
-            <FaPhone className="text-blue-600" />
+            <FaPhone className="text-ember" />
             <span>{user.phone}</span>
           </div>
 

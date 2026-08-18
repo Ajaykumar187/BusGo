@@ -1,7 +1,7 @@
-function Card({ children, className = "", padding = "p-6" }) {
+function Card({ children, className = "", padding = "p-6", surface = "light" }) {
   return (
     <div
-      className={`bg-white rounded-2xl shadow-lg ${padding} ${className}`}
+      className={`${surface === "dark" ? "glass-dark" : "glass-light"} rounded-2xl ${padding} ${className}`}
     >
       {children}
     </div>

@@ -30,7 +30,7 @@ function TicketActions({ booking }) {
 
       <button
         onClick={handleDownload}
-        className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-xl"
+        className="ember-glow bg-gradient-to-r from-ember to-ember-light text-white px-6 py-3 rounded-xl"
       >
         Download Ticket
       </button>

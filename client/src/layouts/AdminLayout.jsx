@@ -7,7 +7,7 @@ import Topbar from "../components/admin/Topbar";
 // topbar, with the active admin page rendered via <Outlet />.
 function AdminLayout() {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen page-wash">
 
       <Sidebar />
 

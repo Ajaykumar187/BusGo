@@ -119,5 +119,17 @@ The Bus Details page (`components/bus/BusDetailsCard.jsx`) had no "Book Now" but
 
 Rebuilt and reinstalled both `client` and `server` from a clean `node_modules` after all these changes — build and server boot both verified working end-to-end.
 
+## Visual redesign — "Dusk Highway" glassmorphism
+The whole frontend was restyled around a single design system instead of the generic blue-on-white template look:
+
+- **Palette**: a night-highway gradient (deep indigo `#0a0e27` → violet `#3b1d6e` → warm ember `#ff6a3d`) used on the hero, navbar-adjacent surfaces, footer, and admin sidebar; a cyan `#22d3ee` secondary accent; frosted-glass panels (`backdrop-filter: blur`) for cards, forms, modals, and the search box, sitting on a soft ambient page gradient instead of flat gray.
+- **Type**: Space Grotesk for headings, Inter for body text, IBM Plex Mono for route timings, seat numbers, and booking/ticket IDs — set up as design tokens in `index.css` (`@theme`) so every screen pulls from the same source.
+- **Signature element**: `components/common/LightStreaks.jsx` — thin animated light streaks sweeping across the dark hero/footer, evoking headlights on a highway at night. Respects `prefers-reduced-motion`.
+- Every card-style surface (bus cards, filters, seat map, payment summary, tickets, booking cards, admin tables, modals, auth forms) now uses the `.glass-light` / `.glass-dark` utilities and the ember/dusk/route palette instead of plain white cards and blue-700 buttons.
+- Navbar is a translucent, blurred sticky bar (`.glass-nav`) so it reads consistently over any page background.
+
+Rebuilt from a clean `node_modules` again after the redesign — build is clean with no CSS warnings.
+
+
 
 

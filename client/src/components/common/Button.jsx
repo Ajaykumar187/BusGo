@@ -1,8 +1,8 @@
 const VARIANTS = {
-  primary: "bg-blue-700 hover:bg-blue-800 text-white",
-  secondary: "bg-gray-200 hover:bg-gray-300 text-gray-900",
-  danger: "bg-red-600 hover:bg-red-700 text-white",
-  outline: "border border-blue-700 text-blue-700 hover:bg-blue-50",
+  primary: "ember-glow bg-gradient-to-r from-ember to-ember-light text-white",
+  secondary: "bg-ink/5 hover:bg-ink/10 text-ink",
+  danger: "bg-rose-600 hover:bg-rose-700 text-white",
+  outline: "border border-ember text-ember hover:bg-ember/10",
 };
 
 function Button({

@@ -97,7 +97,7 @@ const handleContinue = async () => {
       <div className="text-right mt-8">
         <button
           onClick={handleContinue}
-          className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-xl"
+          className="ember-glow bg-gradient-to-r from-ember to-ember-light text-white px-8 py-3 rounded-xl"
         >
           Continue to Payment
         </button>

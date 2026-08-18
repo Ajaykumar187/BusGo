@@ -24,11 +24,11 @@ function BusTable({ buses, refresh }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div className="glass-light rounded-2xl overflow-hidden">
 
       <table className="w-full">
 
-        <thead className="bg-blue-700 text-white">
+        <thead className="bg-gradient-to-r from-ember to-ember-light text-white">
 
           <tr>
 

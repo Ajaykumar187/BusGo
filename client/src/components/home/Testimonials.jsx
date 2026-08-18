@@ -35,7 +35,7 @@ function Testimonials() {
 
         <div className="text-center mb-12">
 
-          <h2 className="text-4xl font-bold">
+          <h2 className="font-display text-4xl font-bold text-ink">
             What Our Customers Say
           </h2>
 
@@ -47,10 +47,10 @@ function Testimonials() {
 
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="glass-light rounded-2xl p-8"
             >
 
-              <div className="flex gap-1 text-yellow-500 mb-4">
+              <div className="flex gap-1 text-amber-400 mb-4">
 
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} />
@@ -58,7 +58,7 @@ function Testimonials() {
 
               </div>
 
-              <p className="text-gray-600 italic">
+              <p className="text-ink/60 italic">
 
                 "{review.review}"
 
@@ -66,11 +66,11 @@ function Testimonials() {
 
               <div className="mt-6">
 
-                <h3 className="font-bold">
+                <h3 className="font-display font-bold text-ink">
                   {review.name}
                 </h3>
 
-                <p className="text-gray-500">
+                <p className="text-ink/40">
                   {review.city}
                 </p>
 

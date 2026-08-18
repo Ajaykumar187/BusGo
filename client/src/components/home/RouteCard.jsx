@@ -11,7 +11,7 @@ function RouteCard({ route }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+    <div className="glass-light rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
       <img
         src={route.image}
@@ -21,15 +21,15 @@ function RouteCard({ route }) {
 
       <div className="p-6">
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between font-mono">
 
-          <h2 className="text-xl font-bold">
+          <h2 className="font-sans text-xl font-bold text-ink">
             {route.from}
           </h2>
 
-          <FaArrowRight className="text-blue-600" />
+          <FaArrowRight className="text-ember" />
 
-          <h2 className="text-xl font-bold">
+          <h2 className="font-sans text-xl font-bold text-ink">
             {route.to}
           </h2>
 
@@ -37,11 +37,11 @@ function RouteCard({ route }) {
 
         <div className="mt-5 space-y-2">
 
-          <p className="text-green-600 font-semibold">
+          <p className="text-emerald-600 font-semibold">
             Starting From ₹{route.price}
           </p>
 
-          <p className="text-gray-600 flex items-center gap-2">
+          <p className="text-ink/60 flex items-center gap-2">
             <FaBusAlt />
             {route.buses} Buses Daily
           </p>
@@ -50,7 +50,7 @@ function RouteCard({ route }) {
 
         <button
           onClick={handleSearch}
-          className="mt-6 w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-xl"
+          className="ember-glow mt-6 w-full bg-gradient-to-r from-ember to-ember-light text-white py-3 rounded-xl font-semibold"
         >
           View Buses
         </button>

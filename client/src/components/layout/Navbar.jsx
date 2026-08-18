@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 glass-nav">
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
@@ -39,17 +39,16 @@ function Navbar() {
           to="/"
           className="flex items-center gap-3"
         >
-          <FaBusAlt
-            className="text-blue-600"
-            size={34}
-          />
+          <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-ember to-dusk text-white">
+            <FaBusAlt size={20} />
+          </span>
 
           <div>
-            <h1 className="text-2xl font-bold text-blue-700">
+            <h1 className="font-display text-2xl font-bold text-ink">
               BusGo
             </h1>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-ink/50 -mt-0.5">
               Travel Across India
             </p>
           </div>
@@ -65,8 +64,8 @@ function Navbar() {
               to={item.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-700 font-semibold"
-                  : "text-gray-700 hover:text-blue-700 transition"
+                  ? "text-ember font-semibold"
+                  : "text-ink/70 hover:text-ember transition-colors"
               }
             >
               {item.name}
@@ -84,19 +83,19 @@ function Navbar() {
 
               <button
                 onClick={() => setProfileOpen(!profileOpen)}
-                className="flex items-center gap-2 text-gray-700 hover:text-blue-700"
+                className="flex items-center gap-2 text-ink/80 hover:text-ember transition-colors"
               >
-                <FaUserCircle size={34} />
+                <FaUserCircle size={32} className="text-dusk" />
                 <span className="font-medium">{user?.name?.split(" ")[0]}</span>
               </button>
 
               {profileOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border py-2">
+                <div className="absolute right-0 mt-3 w-52 rounded-2xl glass-light overflow-hidden py-2">
 
                   <Link
                     to="/profile"
                     onClick={() => setProfileOpen(false)}
-                    className="block px-4 py-2 hover:bg-gray-50"
+                    className="block px-4 py-2.5 hover:bg-white/70"
                   >
                     My Profile
                   </Link>
@@ -104,7 +103,7 @@ function Navbar() {
                   <Link
                     to="/my-bookings"
                     onClick={() => setProfileOpen(false)}
-                    className="block px-4 py-2 hover:bg-gray-50"
+                    className="block px-4 py-2.5 hover:bg-white/70"
                   >
                     My Bookings
                   </Link>
@@ -113,7 +112,7 @@ function Navbar() {
                     <Link
                       to="/admin"
                       onClick={() => setProfileOpen(false)}
-                      className="block px-4 py-2 hover:bg-gray-50"
+                      className="block px-4 py-2.5 hover:bg-white/70"
                     >
                       Admin Panel
                     </Link>
@@ -121,7 +120,7 @@ function Navbar() {
 
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50"
+                    className="w-full text-left px-4 py-2.5 text-rose-600 hover:bg-rose-50/70"
                   >
                     Logout
                   </button>
@@ -134,14 +133,14 @@ function Navbar() {
             <>
               <Link
                 to="/login"
-                className="px-5 py-2 rounded-lg border border-blue-600 text-blue-700 hover:bg-blue-50 transition"
+                className="px-5 py-2.5 rounded-xl border border-ink/15 text-ink/80 hover:border-ember hover:text-ember transition-colors"
               >
                 Login
               </Link>
 
               <Link
                 to="/register"
-                className="px-5 py-2 rounded-lg bg-blue-700 text-white hover:bg-blue-800 transition"
+                className="ember-glow px-5 py-2.5 rounded-xl bg-gradient-to-r from-ember to-ember-light text-white font-medium"
               >
                 Register
               </Link>
@@ -154,7 +153,7 @@ function Navbar() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden"
+          className="lg:hidden text-ink"
         >
           {menuOpen ? (
             <HiX size={30} />
@@ -168,14 +167,14 @@ function Navbar() {
       {/* Mobile Menu */}
 
       {menuOpen && (
-        <div className="lg:hidden bg-white border-t">
+        <div className="lg:hidden glass-light border-t border-ink/10">
 
           {navLinks.map((item) => (
             <NavLink
               key={item.name}
               to={item.path}
               onClick={() => setMenuOpen(false)}
-              className="block px-6 py-4 border-b hover:bg-gray-100"
+              className="block px-6 py-4 border-b border-ink/5 hover:bg-white/50"
             >
               {item.name}
             </NavLink>
@@ -187,7 +186,7 @@ function Navbar() {
               <Link
                 to="/profile"
                 onClick={() => setMenuOpen(false)}
-                className="text-center border border-gray-300 py-2 rounded-lg"
+                className="text-center border border-ink/15 py-2 rounded-xl"
               >
                 My Profile
               </Link>
@@ -196,7 +195,7 @@ function Navbar() {
                 <Link
                   to="/admin"
                   onClick={() => setMenuOpen(false)}
-                  className="text-center border border-gray-300 py-2 rounded-lg"
+                  className="text-center border border-ink/15 py-2 rounded-xl"
                 >
                   Admin Panel
                 </Link>
@@ -204,7 +203,7 @@ function Navbar() {
 
               <button
                 onClick={handleLogout}
-                className="text-center bg-red-600 text-white py-2 rounded-lg"
+                className="text-center bg-rose-600 text-white py-2 rounded-xl"
               >
                 Logout
               </button>
@@ -216,7 +215,7 @@ function Navbar() {
               <Link
                 to="/login"
                 onClick={() => setMenuOpen(false)}
-                className="text-center border border-blue-700 py-2 rounded-lg"
+                className="text-center border border-ember py-2 rounded-xl text-ember"
               >
                 Login
               </Link>
@@ -224,7 +223,7 @@ function Navbar() {
               <Link
                 to="/register"
                 onClick={() => setMenuOpen(false)}
-                className="text-center bg-blue-700 text-white py-2 rounded-lg"
+                className="text-center bg-gradient-to-r from-ember to-ember-light text-white py-2 rounded-xl"
               >
                 Register
               </Link>

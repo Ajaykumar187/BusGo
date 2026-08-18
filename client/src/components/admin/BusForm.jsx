@@ -29,7 +29,7 @@ function BusForm({ onSubmit, initialData = {} }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-2xl shadow-lg p-8"
+      className="glass-light rounded-2xl p-8"
     >
       <div className="grid md:grid-cols-2 gap-6">
 
@@ -136,7 +136,7 @@ function BusForm({ onSubmit, initialData = {} }) {
 
       <button
         type="submit"
-        className="mt-8 bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-lg"
+        className="mt-8 ember-glow bg-gradient-to-r from-ember to-ember-light text-white px-8 py-3 rounded-lg"
       >
         Save Bus
       </button>

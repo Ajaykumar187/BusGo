@@ -1,8 +1,8 @@
 function BoardingPoints() {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
+    <div className="glass-light rounded-2xl p-8">
 
-      <h2 className="text-2xl font-bold mb-6">
+      <h2 className="font-display text-2xl font-bold mb-6 text-ink">
         Boarding & Dropping Points
       </h2>
 

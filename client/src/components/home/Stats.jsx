@@ -30,7 +30,7 @@ function Stats() {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="py-20 page-wash">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -39,17 +39,17 @@ function Stats() {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl shadow-md p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="glass-light rounded-2xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="text-blue-700 flex justify-center mb-5">
+              <div className="text-ember flex justify-center mb-5">
                 {item.icon}
               </div>
 
-              <h2 className="text-4xl font-bold text-gray-800">
+              <h2 className="font-display text-4xl font-bold text-ink">
                 {item.number}
               </h2>
 
-              <p className="text-gray-600 mt-2">
+              <p className="text-ink/60 mt-2">
                 {item.title}
               </p>
             </div>

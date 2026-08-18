@@ -4,19 +4,19 @@ function AppDownload() {
 
   return (
 
-    <section className="bg-blue-700 text-white py-20">
+    <section className="relative overflow-hidden hero-gradient text-white py-20">
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center relative z-10">
 
         <div>
 
-          <h2 className="text-5xl font-bold mb-6">
+          <h2 className="font-display text-5xl font-bold mb-6">
 
             Download BusGo App
 
           </h2>
 
-          <p className="text-lg">
+          <p className="text-lg text-white/70">
 
             Book bus tickets anytime, anywhere.
 
@@ -26,17 +26,17 @@ function AppDownload() {
 
         <div className="flex gap-5">
 
-          <button className="bg-white text-black px-6 py-4 rounded-xl flex items-center gap-3">
+          <button className="glass-dark hover:bg-white/15 text-white px-6 py-4 rounded-xl flex items-center gap-3 transition-colors">
 
-            <FaGooglePlay size={25}/>
+            <FaGooglePlay size={22}/>
 
             Google Play
 
           </button>
 
-          <button className="bg-white text-black px-6 py-4 rounded-xl flex items-center gap-3">
+          <button className="glass-dark hover:bg-white/15 text-white px-6 py-4 rounded-xl flex items-center gap-3 transition-colors">
 
-            <FaApple size={25}/>
+            <FaApple size={22}/>
 
             App Store
 

@@ -76,14 +76,14 @@ function SeatLayout({ busId }) {
 
   if (loading) {
     return (
-      <div className="text-center text-3xl mt-20">
-        Loading Seats...
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-12 h-12 rounded-full border-4 border-ember/20 border-t-ember animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="min-h-screen py-10">
 
       <div className="max-w-7xl mx-auto">
 
@@ -95,11 +95,11 @@ function SeatLayout({ busId }) {
 
         {/* Left Side */}
 
-        <div className="lg:col-span-2 bg-white rounded-3xl shadow-xl p-8">
+        <div className="lg:col-span-2 glass-light rounded-3xl p-8">
 
           <DriverCabin />
 
-          <div className="border-2 rounded-3xl p-8 bg-gray-50">
+          <div className="border-2 border-ink/10 rounded-3xl p-8 bg-white/40">
 
             {rows.map((row, index) => (
               <SeatRow

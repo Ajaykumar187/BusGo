@@ -6,16 +6,16 @@ function DriverCabin() {
 
       <div className="flex items-center gap-4">
 
-        <div className="w-16 h-16 rounded-full border-4 border-gray-300 flex items-center justify-center">
+        <div className="w-16 h-16 rounded-full border-4 border-dusk/20 bg-white flex items-center justify-center">
 
           <RiSteeringFill
             size={28}
-            className="text-blue-700"
+            className="text-dusk"
           />
 
         </div>
 
-        <h2 className="font-bold text-xl">
+        <h2 className="font-display font-bold text-xl text-ink">
           Driver
         </h2>
 

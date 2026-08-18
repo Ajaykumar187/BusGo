@@ -15,10 +15,10 @@ function Topbar() {
   };
 
   return (
-    <header className="h-20 bg-white shadow-sm flex items-center justify-between px-8">
+    <header className="h-20 glass-nav flex items-center justify-between px-8">
 
       <div>
-        <h1 className="text-lg font-semibold text-gray-800">
+        <h1 className="font-display text-lg font-semibold text-ink">
           Welcome back, {user?.name || "Admin"}
         </h1>
       </div>
@@ -27,19 +27,19 @@ function Topbar() {
 
         <Link
           to="/"
-          className="text-sm text-blue-700 hover:underline"
+          className="text-sm text-ember hover:underline font-medium"
         >
           View Site
         </Link>
 
-        <div className="flex items-center gap-2 text-gray-600">
-          <FaUserCircle size={26} />
+        <div className="flex items-center gap-2 text-ink/60">
+          <FaUserCircle size={26} className="text-dusk" />
           <span className="text-sm">{user?.email}</span>
         </div>
 
         <button
           onClick={handleLogout}
-          className="flex items-center gap-2 text-red-600 hover:text-red-700 text-sm font-semibold"
+          className="flex items-center gap-2 text-rose-600 hover:text-rose-700 text-sm font-semibold"
         >
           <FaSignOutAlt />
           Logout

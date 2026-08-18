@@ -35,17 +35,17 @@ function Features() {
   ];
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="py-20">
 
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-14">
 
-          <h2 className="text-4xl font-bold">
+          <h2 className="font-display text-4xl font-bold text-ink">
             Why Choose BusGo?
           </h2>
 
-          <p className="text-gray-600 mt-4">
+          <p className="text-ink/60 mt-4">
             Trusted by thousands of travelers every day.
           </p>
 
@@ -57,18 +57,18 @@ function Features() {
 
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl p-8 text-center transition-all duration-300"
+              className="glass-light rounded-2xl hover:shadow-xl p-8 text-center transition-all duration-300 hover:-translate-y-1"
             >
 
-              <div className="text-blue-700 flex justify-center mb-5">
+              <div className="text-ember flex justify-center mb-5">
                 {item.icon}
               </div>
 
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="font-display text-xl font-bold mb-3 text-ink">
                 {item.title}
               </h3>
 
-              <p className="text-gray-600">
+              <p className="text-ink/60">
                 {item.description}
               </p>
 

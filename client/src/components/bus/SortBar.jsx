@@ -30,11 +30,11 @@ function SortBar({ sortBy, setSortBy }) {
   ];
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-5 mb-6">
+    <div className="glass-light rounded-2xl p-5 mb-6">
 
       <div className="flex items-center gap-3 mb-4">
 
-        <FaSortAmountDown className="text-blue-600" />
+        <FaSortAmountDown className="text-ember" />
 
         <h2 className="text-xl font-bold">
           Sort By
@@ -55,8 +55,8 @@ function SortBar({ sortBy, setSortBy }) {
 
             ${
               sortBy === item.value
-                ? "bg-blue-700 text-white border-blue-700"
-                : "bg-white hover:bg-blue-50"
+                ? "bg-gradient-to-r from-ember to-ember-light text-white border-transparent"
+                : "bg-white/60 hover:bg-white text-ink/70 border-ink/10"
             }
 
             `}

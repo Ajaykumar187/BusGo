@@ -22,17 +22,17 @@ function Modal({ isOpen, onClose, title, children }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6"
+        className="glass-light rounded-2xl shadow-2xl w-full max-w-md p-6"
       >
         <div className="flex justify-between items-center mb-4">
 
           {title && (
-            <h2 className="text-xl font-bold">{title}</h2>
+            <h2 className="font-display text-xl font-bold text-ink">{title}</h2>
           )}
 
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-700 text-2xl leading-none"
+            className="text-ink/40 hover:text-ink text-2xl leading-none"
             aria-label="Close"
           >
             &times;

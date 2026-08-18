@@ -30,10 +30,10 @@ function WhyChooseUs() {
   ];
 
   return (
-    <section className="bg-gray-100 py-20 mt-10">
+    <section className="bg-mist/60 py-20 mt-10">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center mb-14">
+        <h2 className="font-display text-4xl font-bold text-center mb-14 text-ink">
           Why Choose BusGo?
         </h2>
 
@@ -42,17 +42,17 @@ function WhyChooseUs() {
           {features.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition"
+              className="glass-light rounded-2xl p-8 text-center hover:-translate-y-2 transition"
             >
-              <div className="text-blue-700 flex justify-center mb-5">
+              <div className="text-ember flex justify-center mb-5">
                 {item.icon}
               </div>
 
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="font-display text-xl font-bold mb-3 text-ink">
                 {item.title}
               </h3>
 
-              <p className="text-gray-600">
+              <p className="text-ink/60">
                 {item.desc}
               </p>
             </div>

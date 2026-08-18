@@ -8,7 +8,7 @@ import Footer from "../components/layout/Footer";
 // them individually.
 function MainLayout() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen page-wash">
       <Navbar />
 
       <main className="flex-1">

@@ -37,25 +37,25 @@ function BookingCard({ booking, refreshBookings }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
+    <div className="glass-light rounded-2xl p-6">
 
       <div className="flex justify-between items-start flex-wrap gap-4">
 
         <div>
 
-          <h2 className="text-2xl font-bold">
+          <h2 className="font-display text-2xl font-bold text-ink">
             {booking.bus?.busName}
           </h2>
 
-          <p className="text-gray-500">
+          <p className="text-ink/50">
             {booking.bus?.source} → {booking.bus?.destination}
           </p>
 
-          <p className="mt-2">
+          <p className="mt-2 font-mono text-ink/80">
             Seats: {booking.selectedSeats?.join(", ")}
           </p>
 
-          <p>
+          <p className="text-ink/80">
             Amount: ₹{booking.totalAmount}
           </p>
 
@@ -77,7 +77,7 @@ function BookingCard({ booking, refreshBookings }) {
             onClick={() =>
               navigate(`/ticket/${booking._id}`)
             }
-            className="bg-blue-700 hover:bg-blue-800 text-white px-5 py-2 rounded-lg transition-colors"
+            className="ember-glow bg-gradient-to-r from-ember to-ember-light text-white px-5 py-2 rounded-lg transition-colors"
           >
             View Ticket
           </button>
@@ -85,7 +85,7 @@ function BookingCard({ booking, refreshBookings }) {
           {booking.bookingStatus !== "Cancelled" && (
             <button
               onClick={() => setShowConfirm(true)}
-              className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-lg transition-colors"
+              className="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2 rounded-lg transition-colors"
             >
               Cancel
             </button>
@@ -100,7 +100,7 @@ function BookingCard({ booking, refreshBookings }) {
         onClose={() => setShowConfirm(false)}
         title="Cancel Booking"
       >
-        <p className="text-gray-600 mb-6">
+        <p className="text-ink/60 mb-6">
           Are you sure you want to cancel this booking? This action cannot be undone.
         </p>
 
@@ -108,7 +108,7 @@ function BookingCard({ booking, refreshBookings }) {
 
           <button
             onClick={() => setShowConfirm(false)}
-            className="flex-1 border border-gray-300 py-2 rounded-lg hover:bg-gray-50"
+            className="flex-1 border border-ink/15 py-2 rounded-lg hover:bg-ink/5"
           >
             Keep Booking
           </button>
@@ -116,7 +116,7 @@ function BookingCard({ booking, refreshBookings }) {
           <button
             onClick={handleCancel}
             disabled={cancelling}
-            className="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg disabled:opacity-60"
+            className="flex-1 bg-rose-600 hover:bg-rose-700 text-white py-2 rounded-lg disabled:opacity-60"
           >
             {cancelling ? "Cancelling..." : "Yes, Cancel"}
           </button>

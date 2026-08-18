@@ -38,7 +38,7 @@ function Ticket() {
     return (
       <div className="text-center mt-24 space-y-4">
         <p className="text-2xl font-semibold">Ticket not found.</p>
-        <Link to="/my-bookings" className="text-blue-700 font-semibold">
+        <Link to="/my-bookings" className="text-ember font-semibold">
           Back to My Bookings
         </Link>
       </div>
@@ -46,14 +46,14 @@ function Ticket() {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10 px-4">
+    <div className="min-h-screen py-10 px-4">
 
       <div className="max-w-2xl mx-auto">
 
         <TicketCard booking={booking} />
 
         <div className="text-center mt-6">
-          <Link to="/my-bookings" className="text-blue-700 font-semibold">
+          <Link to="/my-bookings" className="text-ember font-semibold">
             ← Back to My Bookings
           </Link>
         </div>

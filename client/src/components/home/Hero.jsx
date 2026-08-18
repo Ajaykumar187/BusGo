@@ -1,4 +1,4 @@
-import heroImage from "../../assets/images/hero-bus.jpg";
+import LightStreaks from "../common/LightStreaks";
 import SearchSection from "./SearchSection";
 
 function Hero() {
@@ -12,40 +12,41 @@ function Hero() {
   ];
 
   return (
-    <section
-      className="relative h-[90vh] bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${heroImage})`,
-      }}
-    >
-      {/* Overlay */}
+    <section className="relative overflow-hidden hero-gradient pb-28 pt-24 md:pt-32">
 
-      <div className="absolute inset-0 bg-black/60"></div>
+      <LightStreaks count={8} />
 
       {/* Content */}
 
-      <div className="relative z-10 flex flex-col justify-center h-full">
+      <div className="relative z-10 px-5">
 
-        <div className="text-center text-white px-5">
+        <div className="text-center text-white max-w-3xl mx-auto">
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-5">
-            Book Bus Tickets Across India
+          <span className="inline-block mb-5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase glass-dark text-ember-light">
+            Trusted by 2M+ travellers
+          </span>
+
+          <h1 className="font-display text-5xl md:text-6xl font-bold mb-5 leading-tight">
+            Your journey,{" "}
+            <span className="bg-gradient-to-r from-ember to-route bg-clip-text text-transparent">
+              on time.
+            </span>
           </h1>
 
-          <p className="text-xl text-gray-200 mb-12">
-            Safe, Secure and Affordable Bus Travel
+          <p className="text-lg text-white/70 mb-14">
+            Search, compare and book bus tickets across India — safe, secure and affordable.
           </p>
 
         </div>
 
         <SearchSection />
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
 
           {cities.map((city) => (
             <span
               key={city}
-              className="bg-white/20 backdrop-blur-md text-white px-5 py-2 rounded-full border border-white/30"
+              className="glass-dark text-white/90 px-5 py-2 rounded-full text-sm font-medium"
             >
               {city}
             </span>

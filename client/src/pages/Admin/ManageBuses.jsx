@@ -31,7 +31,7 @@ function ManageBuses() {
 
         <button
           onClick={() => navigate("/admin/add-bus")}
-          className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg"
+          className="ember-glow bg-gradient-to-r from-ember to-ember-light text-white px-6 py-3 rounded-lg"
         >
           + Add Bus
         </button>

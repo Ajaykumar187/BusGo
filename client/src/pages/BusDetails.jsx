@@ -58,7 +58,7 @@ function BusDetails() {
 
   return (
 
-    <div className="bg-gray-100 py-10">
+    <div className="py-10">
 
       <div className="max-w-7xl mx-auto px-5 space-y-8">
 

@@ -1,10 +1,10 @@
 function Seat({ seat, selected, onSelect }) {
 
   const seatClass = seat.isBooked
-    ? "bg-red-500 text-white"
+    ? "bg-rose-400 text-white cursor-not-allowed"
     : selected
-    ? "bg-blue-600 text-white"
-    : "bg-green-500 text-white hover:bg-green-600";
+    ? "bg-gradient-to-br from-ember to-ember-light text-white shadow-lg shadow-ember/30"
+    : "bg-white border-2 border-emerald-300 text-emerald-700 hover:border-ember hover:text-ember";
 
   return (
     <button

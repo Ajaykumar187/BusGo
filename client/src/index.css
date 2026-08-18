@@ -1,9 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap");
 @import "tailwindcss";
 
-body{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f8fafc;
+/* ---------------------------------------------------------------- */
+/* Design tokens — BusGo "Dusk Highway" system                       */
+/* ---------------------------------------------------------------- */
+@theme {
+  --color-void: #0a0e27;
+  --color-dusk: #3b1d6e;
+  --color-ember: #ff6a3d;
+  --color-ember-light: #ff9466;
+  --color-route: #22d3ee;
+  --color-mist: #f6f5fb;
+  --color-ink: #14152b;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  background: var(--color-mist);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------- */
+/* Glassmorphism surfaces                                            */
+/* ---------------------------------------------------------------- */
+
+/* For panels sitting on the dark hero gradient */
+.glass-dark {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 8px 32px rgba(10, 14, 39, 0.35);
+}
+
+/* For panels sitting on light page backgrounds */
+.glass-light {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px rgba(59, 29, 110, 0.08);
+}
+
+/* Sticky translucent navbar, works over any page content */
+.glass-nav {
+  background: rgba(246, 245, 251, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(20, 21, 43, 0.06);
+}
+
+/* Ambient page background used on every screen so glass panels have
+   something colorful to refract, instead of a flat gray. */
+.page-wash {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 106, 61, 0.10), transparent 40%),
+    radial-gradient(circle at 88% 0%, rgba(34, 211, 238, 0.10), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(59, 29, 110, 0.08), transparent 50%),
+    var(--color-mist);
+  min-height: 100vh;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--color-void) 0%,
+    var(--color-dusk) 55%,
+    #7a2f5e 78%,
+    var(--color-ember) 130%
+  );
+}
+
+/* ---------------------------------------------------------------- */
+/* Signature element: animated highway light streaks                 */
+/* ---------------------------------------------------------------- */
+.light-streaks {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.light-streak {
+  position: absolute;
+  height: 2px;
+  width: 40%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(255, 154, 102, 0.85), transparent);
+  animation: streak-move linear infinite;
+  opacity: 0;
+}
+
+.light-streak.route {
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.75), transparent);
+}
+
+@keyframes streak-move {
+  0% { transform: translateX(-120%); opacity: 0; }
+  8% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(220%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light-streak {
+    animation: none;
+    opacity: 0.3;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Utility: glow ring for primary interactive elements                */
+/* ---------------------------------------------------------------- */
+.ember-glow {
+  box-shadow: 0 0 0 0 rgba(255, 106, 61, 0);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.ember-glow:hover {
+  box-shadow: 0 8px 30px -6px rgba(255, 106, 61, 0.55);
+  transform: translateY(-1px);
+}
+
+::selection {
+  background: var(--color-ember-light);
+  color: var(--color-void);
 }
